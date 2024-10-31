@@ -22,7 +22,7 @@ def play_stage(stage, stage_name):
             continue
 
         # If player chooses 'a' or 'd', select a random different city
-        if move in ["a", "d"]:
+        if move in ["a", "d","w"]:
             alt_city = random.choice(cities)
             while alt_city == city:
                 alt_city = random.choice(cities)
@@ -47,6 +47,6 @@ def play_stage(stage, stage_name):
             return False
 
     # If 10 tries are reached without losing all HP, proceed to next stage
-    if tries == 10:
-        print(f"Stage {stage_name.capitalize()} complete! Moving to the next region...\n")
+        if tries == 10:
+            print(f"Stage {stage_name.capitalize()} complete! Moving to the next region...\n")
     return True
