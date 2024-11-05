@@ -17,8 +17,8 @@ def play_game():
     print("SO LET THE ADVENTURE BEGIN !")
     print(f"You start from {starting_point} to {ending_point}.")
     for i, stage in enumerate(stage):
-        stage_name = ["vest", "centru", "est"][i]
-        print(f" You are in {stage_name} city ")
+        stage_name = ["west", "center", "east"][i]
+        print(f" You are in the {stage_name} side of the country ")
 
         # play current city
         if not play_stage(stage, stage_name):
