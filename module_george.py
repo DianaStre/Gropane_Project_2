@@ -41,7 +41,10 @@ def generate_road():
         "Piatra Neamt": -1,
         "Bacau": -1,
         "Ramnicu Sarat": 0,
-        "Vaslui": 0
+        "Vaslui": 1,
+        "Tecuci": 0,  # New city with 0 damage
+        "Barlad": 1,  # New city with +1 HP
+        "Roman": 1  # New city with +1 HP
     }
 
     return starting_point, ending_point, [harta_vest_romania, harta_centru_romania, harta_est_romania]
