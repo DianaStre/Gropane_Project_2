@@ -15,7 +15,7 @@ def play_stage(stage, stage_name):  #
                                   # player has HP and hasn't made 10 moves yet.
         city = random.choice(cities)  #This randomly selects a city from the list of available cities.
 
-        # Display player information
+        # Display player information and we announce the player keys for playing
         print(f"\nCurrent HP: {hp} | A city is ahead!")
         print("Choose direction: 'a' (left), 'w' (straight), 'd' (right)")
 
@@ -33,7 +33,7 @@ def play_stage(stage, stage_name):  #
                 alt_city = random.choice(cities)
             city = alt_city
 
-        # Get damage value and update HP
+        # Get damage value and update HP by each city we move
         city_damage = stage[city]
         hp += city_damage
 
@@ -47,14 +47,14 @@ def play_stage(stage, stage_name):  #
         # Update the number of moves
         moves += 1
 
-        # Check if player has lost
+        # Check if player has lost,we used less than 0 if by any chance his live will go less than 0(-1 or -2...)
         if hp <= 0:
             print("Your car has been totaled! Game over.")
             return False
 
     # Check if the stage is complete
     if hp > 0:
-        print(f"Stage {stage_name.capitalize()} complete! You've made {moves} moves. Moving to the next region...\n")
+        print(f"Stage {stage_name.capitalize()} completed! You've made {moves} moves. Moving to the next region...\n")
         return True
     else:
         print("Your car has been totaled! Game over.")
