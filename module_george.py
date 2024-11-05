@@ -2,6 +2,17 @@ def generate_road():
     """
     George: Defines the game map with cities and damage values for each region of Romania.
     """
+    # player starts in Timisoara, having just repaired their car
+    # player wants to go home to Iasi
+    # each section of the map contains 10 cities (local clusters)
+    # inpartim tara in 3, vest/ centru/ est
+    # plecam din vest, cand terminam vestul (cu viata), trecem la urmatorul nivel (centru), etc.
+    # player must cross a total of 3 sections
+    # din cele 3 optiuni,
+    #       la nivelul 1: 1 neutra (0 damage), 1 buna (+1 damage), 1 rea (-1 damage)
+    #       la nivelul 2: 2 neutre (0 damage), 1 rea (-1 damage)
+    #       la nivelul 3: 2 rele (-1 damage), 1 neutra (0 damage)
+    # fiecare oras prin care am trecut, se suprima din lista dictionarului
     starting_point = "Timisoara"
     ending_point = "Iasi"
 
