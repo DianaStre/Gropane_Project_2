@@ -13,6 +13,7 @@ def generate_road():
     #       la nivelul 2: 2 neutre (0 damage), 1 rea (-1 damage)
     #       la nivelul 3: 2 rele (-1 damage), 1 neutra (0 damage)
     # fiecare oras prin care am trecut, se suprima din lista dictionarului
+    # new line
     starting_point = "Timisoara"
     ending_point = "Iasi"
 
