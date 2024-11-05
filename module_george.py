@@ -1,3 +1,6 @@
+from random import random, randint
+
+
 def generate_road():
     """
     George: Defines the game map with cities and damage values for each region of Romania.
@@ -18,16 +21,16 @@ def generate_road():
     ending_point = "Iasi"
 
     harta_vest_romania = {
-        "Arad": 0,
-        "Oradea": 1,
+        "Arad": randint(0,1),
+        "Oradea": randint(0,1),
         "Satu Mare": -1,
-        "Sighetu Marmatiei": 0,
-        "Craiova": 1,
+        "Sighetu Marmatiei": randint(0,1),
+        "Craiova": randint(0,1),
         "Zalau": -1,
-        "Deva": 0,
-        "Drobeta-Turnu Severin": 1,
+        "Deva": randint(0,1),
+        "Drobeta-Turnu Severin": randint(0,1),
         "Baia Mare": -1,
-        "Caransebes": 0
+        "Caransebes": randint(0,1)
     }
 
     harta_centru_romania = {
