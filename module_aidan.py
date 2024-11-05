@@ -2,19 +2,26 @@ from module_george import generate_road
 from module_vlad import play_stage
 
 def play_game():
-    """
-    Aidan: Manages the overall game flow, transitioning through stages from start to end.
-    """
-    starting_point, ending_point, stages = generate_road()
-    print(f"Starting your journey from {starting_point} to {ending_point}.\n")
+    starting_point, ending_point, stage = generate_road()
+    print("""
+      _____ _            _       _                 _                        
+     |_   _| |__   ___  / \   __| |_   _____ _ __ | |_ _   _ _ __ ___ _ __  
+       | | | '_ \ / _ \/ _ \ / _` \ \ / / _ \ '_ \| __| | | | '__/ _ \ '__| 
+       | | | | | |  __/ ___ \ (_| |\ V /  __/ | | | |_| |_| | | |  __/ |    
+       |_| |_| |_|\___/_/   \_\__,_| \_/ \___|_| |_|\__|\__,_|_|  \___|_|    
 
-    for i, stage in enumerate(stages):
+        """)
+    print("This is the story of an unfortunate man who went to the best "
+          "mechanic in the village, after he left the mechanic his way "
+          "to home depended more on Pure Luck:D")
+    print("SO LET THE ADVENTURE BEGIN !")
+    print(f"You start from {starting_point} to {ending_point}.")
+    for i, stage in enumerate(stage):
         stage_name = ["vest", "centru", "est"][i]
-        print(f"--- Entering {stage_name.capitalize()} Romania ---")
+        print(f" You are in {stage_name} city ")
 
-        # Play the current stage
+        # play current city
         if not play_stage(stage, stage_name):
-            return  # End game if the player loses all HP in any stage
-
-    # If all stages are completed, the player wins
-    print("Congratulations! You have successfully reached Iasi and completed the game!")
+            return  # game over  if the player loses his life in a stage
+    # the player wins If he arrives in iasi
+    print("You arrived in Iasi!")
