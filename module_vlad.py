@@ -6,6 +6,8 @@ def play_stage(stage, stage_name):  #
     """
     Vlad: Handles the gameplay for a single stage, managing HP and city encounters.
     """
+    # nivel nou generat cu replenished life (5 HP)
+    # player input is a, w, d
     cities = list(stage.keys())  # This creates a list of all cities
                                  # in the current stage by getting the keys from the stage dictionary.
     hp = 5  # Player's HP for each stage
