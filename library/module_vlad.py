@@ -18,7 +18,7 @@ def play_stage(stage, stage_name):  #
         city = random.choice(cities)  #This randomly selects a city from the list of available cities.
 
         # Display player information and we announce the player keys for playing
-        print(f"\nCurrent HP: {hp} | A city is ahead!")
+        print(f"\nCurrent \033[94mHP: {hp}\033[0m | A city is ahead!")
         print("Choose direction: 'a' (left), 'w' (straight), 'd' (right)")
 
 
