@@ -23,4 +23,6 @@ def play_game():
         if not play_stage(stage, stage_name):
             return  # game over  if the player loses his life in a stage
     # the player wins If he arrives in iasi
-    print("Congratulations! \nYou arrived in Iasi with your car intact!")
+    print(f"\033[1m\033[38;5;82mCongratulations! \033[0m")
+    print(f"\033[1m\033[38;5;220mYou arrived in \033[1m\033[38;5;82mIasi\033[0m")
+    print(f"\033[1m\033[38;5;220mwith your car intact!\033[0m")
