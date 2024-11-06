@@ -58,7 +58,7 @@ def generate_road():
         "Ramnicu Sarat": 0,
         "Vaslui": 1,
         "Tecuci": 0,  # New city with 0 damage
-        "Barlad": 1,  # New city with +1 HP
+        "Barlad": 0,  # New city with +1 HP
         "Roman": 1  # New city with +1 HP
     }
 
