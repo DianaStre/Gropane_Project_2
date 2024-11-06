@@ -51,7 +51,8 @@ def play_stage(stage, stage_name):  #
 
         # Check if player has lost,we used less than 0 if by any chance his live will go less than 0(-1 or -2...)
         if hp <= 0:
-            print(f"Your car has been \033[91mtotaled\033[0m! Game over.")
+            print(f"Your 🚗 has been \033[91mtotaled\033[0m!")
+            print(f"\033[1;31mGame over.💩\033[0m")
             return False
 
     # Check if the stage is complete
