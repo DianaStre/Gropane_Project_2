@@ -18,9 +18,9 @@ def play_game():
     print(f"You start from {starting_point} and you want to go home to {ending_point}.")
     for i, stage in enumerate(stage):
         stage_name = ["western", "central", "eastern"][i]
-        print(f"\033[93mYou are in the \033[91m{stage_name}\033[93m side of the country\033[0m")
+        print(f"\033[93mYou are in the \033[38;5;166m{stage_name}\033[93m side of the country\033[0m")
         # play current city
         if not play_stage(stage, stage_name):
             return  # game over  if the player loses his life in a stage
     # the player wins If he arrives in iasi
-    print("You arrived in Iasi!")
+    print("Congratulations! \nYou arrived in Iasi with your car intact!")

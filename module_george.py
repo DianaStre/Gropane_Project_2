@@ -4,6 +4,8 @@ from random import random, randint
 def generate_road():
     """
     George: Defines the game map with cities and damage values for each region of Romania.
+    The inside joke here is that the western part of the country has better roads, but as you progress east,
+    the roads get worse and worse.
     """
     # player starts in Timisoara, having just repaired their car
     # player wants to go home to Iasi
