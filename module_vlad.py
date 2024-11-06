@@ -40,7 +40,7 @@ def play_stage(stage, stage_name):  #
         hp += city_damage
 
         # Inform the player of their outcome
-        print(f"Entered \033[35m{city}\033[0m. Your HP is now \033[94m{hp}\033[0m.")
+        print(f"Entered \033[35m\033[1m{city}\033[0m. Your HP is now \033[38;5;33m\033[1m{hp}\033[0m.")
 
         # Remove the city from the list to avoid revisiting
         if city in cities:
