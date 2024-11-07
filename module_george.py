@@ -1,4 +1,4 @@
-from random import random, randint
+from random import randrange
 
 
 def generate_road():
@@ -11,64 +11,64 @@ def generate_road():
     # inpartim tara in 3, vest/ centru/ est
     # plecam din vest, cand terminam vestul (cu viata), trecem la urmatorul nivel (centru), etc.
     # player must cross a total of 3 sections
-    # din cele 3 optiuni,
-    #       la nivelul 1: 1 neutra (0 damage), 1 buna (+1 damage), 1 rea (-1 damage)
-    #       la nivelul 2: 2 neutre (0 damage), 1 rea (-1 damage)
-    #       la nivelul 3: 2 rele (-1 damage), 1 neutra (0 damage)
-    # fiecare oras prin care am trecut, se suprima din lista dictionarului
-    # new line
     starting_point = "Timisoara"
     ending_point = "Iasi"
 
+    """Level 1"""
+    # Aici am pus un random de range -1 , 3 pentru mai multe sanse de castig
     harta_vest_romania = {
-        "Arad": random.choice([-1, 0, 1]),
-        "Oradea": random.choice([-1, 0, 1]),
-        "Satu Mare": 1,
-        "Sighetu Marmatiei": random.choice([-1, 0, 1]),
-        "Craiova": random.choice([-1, 0, 1]),
-        "Zalau": 1,
-        "Deva": random.choice([-1, 0, 1]),
-        "Drobeta-Turnu Severin": random.choice([-1, 0, 1]),
-        "Baia Mare": 1,
-        "Caransebes": random.choice([-1, 0, 1]),
-        "Lugoj":-5,
-        "Resita":1
+        "Arad": randrange(-1, 3, 1),
+        "Oradea": randrange(-1, 3, 1),
+        "Satu Mare": randrange(-1, 3, 1),
+        "Sighetu Marmatiei": randrange(-1, 3, 1),
+        "Craiova": randrange(-1, 3, 1),
+        "Zalau": randrange(-1, 3, 1),
+        "Deva": randrange(-1, 3, 1),
+        "Drobeta-Turnu Severin": randrange(-1, 3, 1),
+        "Baia Mare": randrange(-1, 3, 1),
+        "Caransebes": randrange(-1, 3, 1),
+        "Lugoj":-4,
+        "Resita": randrange(-1, 3, 1)
     }
 
+    """Level 2"""
+    # Aici am pus un random de range -1 , 2 pentru sanse moderate
     harta_centru_romania = {
-        "Cluj-Napoca": random.choice([-1, 0, 1]),
-        "Targu Mures": 0,
-        "Ramnicu Valcea": random.choice([-1, 0, 1]),
-        "Bucuresti": random.choice([-1, 0, 1]),
-        "Brasov": random.choice([-1, 0, 1]),
-        "Miercurea Ciuc": 0,
-        "Targoviste": random.choice([-1, 0, 1]),
-        "Turda": random.choice([-1, 0, 1]),
-        "Pitesti": random.choice([-1, 0, 1]),
-        "Ploiesti": 0,
-        "Orastie": -5,
-        "Dej": -5,
-        "Bistrita": 0,
-        "Sighiisoara": random.choice([-1, 0, 1])
+        "Cluj-Napoca": randrange(-1, 2, 1),
+        "Targu Mures": randrange(-1, 2, 1),
+        "Ramnicu Valcea": randrange(-1, 2, 1),
+        "Bucuresti": -4,
+        "Brasov": randrange(-1, 2, 1),
+        "Miercurea Ciuc": randrange(-1, 2, 1),
+        "Targoviste": randrange(-1, 2, 1),
+        "Turda": randrange(-1, 2, 1),
+        "Pitesti": randrange(-1, 2, 1),
+        "Ploiesti": randrange(-1, 2, 1),
+        "Orastie": -2,
+        "Dej": randrange(-1, 2, 1),
+        "Bistrita": randrange(-1, 2, 1),
+        "Sighisoara": randrange(-1, 2, 1)
     }
 
+    """Level 3"""
+    # Aici am pus un random de range -1 , 1 pentru un nivel mai dificil
     harta_est_romania = {
-        "Constanta": random.choice([-1, 0, 1]),
-        "Braila": random.choice([-1, 0, 1]),
-        "Galati": random.choice([-1, 0, 1]),
-        "Focsani": -1,
-        "Botosani": -1,
-        "Suceava": random.choice([-1, 0, 1]),
-        "Piatra Neamt": -1,
-        "Bacau": -1,
-        "Ramnicu Sarat": random.choice([-1, 0, 1]),
-        "Vaslui": random.choice([-1, 0, 1]),
-        "Tecuci": -5,
+        "Constanta": randrange(-1, 1, 1),
+        "Braila": randrange(-1, 1, 1),
+        "Galati": randrange(-1, 1, 1),
+        "Focsani": randrange(-1, 1, 1),
+        "Botosani": randrange(-1, 1, 1),
+        "Suceava": randrange(-1, 1, 1),
+        "Piatra Neamt": randrange(-1, 1, 1),
+        "Bacau": randrange(-1, 1, 1),
+        "Ramnicu Sarat": randrange(-1, 1, 1),
+        "Vaslui": randrange(-1, 1, 1),
+        "Tecuci": -3,
         "Barlad": -5,
-        "Roman": -5,
-        "Husi": random.choice([-1, 0, 1]),
-        "Pascani": random.choice([-1, 0, 1]),
-        "Gura Humorului": random.choice([-1, 0, 1])
+        "Roman": randrange(-1, 1, 1),
+        "Husi": randrange(-1, 1, 1),
+        "Pascani": randrange(-1, 1, 1),
+        "Gura Humorului": randrange(-1, 1, 1)
     }
 
     return starting_point, ending_point, [harta_vest_romania, harta_centru_romania, harta_est_romania]
