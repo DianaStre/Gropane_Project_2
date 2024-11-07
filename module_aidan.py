@@ -13,7 +13,7 @@ def play_game():
         """)
     print("\033[92mThis is the story of an unfortunate adventurer who went to the best "
           "mechanic in the village, but after he left the mechanic his way"
-          "home depended more on Pure Luck:D\033[0m")
+          " home depended more on Pure Luck:D\033[0m")
     print("\033[1;92mSO LET THE ADVENTURE BEGIN !\033[0m")
     print(f"You start from {starting_point} and you want to go home to {ending_point}.")
     for i, stage in enumerate(stage):
