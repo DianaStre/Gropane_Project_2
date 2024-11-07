@@ -1,4 +1,4 @@
-from random import random, randint
+from random import randrange
 
 
 def generate_road():
@@ -11,55 +11,64 @@ def generate_road():
     # inpartim tara in 3, vest/ centru/ est
     # plecam din vest, cand terminam vestul (cu viata), trecem la urmatorul nivel (centru), etc.
     # player must cross a total of 3 sections
-    # din cele 3 optiuni,
-    #       la nivelul 1: 1 neutra (0 damage), 1 buna (+1 damage), 1 rea (-1 damage)
-    #       la nivelul 2: 2 neutre (0 damage), 1 rea (-1 damage)
-    #       la nivelul 3: 2 rele (-1 damage), 1 neutra (0 damage)
-    # fiecare oras prin care am trecut, se suprima din lista dictionarului
-    # new line
     starting_point = "Timisoara"
     ending_point = "Iasi"
 
+    """Level 1"""
+    # Aici am pus un random de range -1 , 3 pentru mai multe sanse de castig
     harta_vest_romania = {
-        "Arad": randint(0,1),
-        "Oradea": randint(0,1),
-        "Satu Mare": -1,
-        "Sighetu Marmatiei": randint(0,1),
-        "Craiova": randint(0,1),
-        "Zalau": -1,
-        "Deva": randint(0,1),
-        "Drobeta-Turnu Severin": randint(0,1),
-        "Baia Mare": -1,
-        "Caransebes": randint(0,1)
+        "Arad": randrange(-1, 3, 1),
+        "Oradea": randrange(-1, 3, 1),
+        "Satu Mare": randrange(-1, 3, 1),
+        "Sighetu Marmatiei": randrange(-1, 3, 1),
+        "Craiova": randrange(-1, 3, 1),
+        "Zalau": randrange(-1, 3, 1),
+        "Deva": randrange(-1, 3, 1),
+        "Drobeta-Turnu Severin": randrange(-1, 3, 1),
+        "Baia Mare": randrange(-1, 3, 1),
+        "Caransebes": randrange(-1, 3, 1),
+        "Lugoj":-4,
+        "Resita": randrange(-1, 3, 1)
     }
 
+    """Level 2"""
+    # Aici am pus un random de range -1 , 2 pentru sanse moderate
     harta_centru_romania = {
-        "Cluj-Napoca": 0,
-        "Targu Mures": 0,
-        "Ramnicu Valcea": -1,
-        "Bucuresti": 0,
-        "Brasov": 0,
-        "Miercurea Ciuc": -1,
-        "Targoviste": 0,
-        "Turda": 0,
-        "Pitesti": -1,
-        "Ploiesti": 0
+        "Cluj-Napoca": randrange(-1, 2, 1),
+        "Targu Mures": randrange(-1, 2, 1),
+        "Ramnicu Valcea": randrange(-1, 2, 1),
+        "Bucuresti": -4,
+        "Brasov": randrange(-1, 2, 1),
+        "Miercurea Ciuc": randrange(-1, 2, 1),
+        "Targoviste": randrange(-1, 2, 1),
+        "Turda": randrange(-1, 2, 1),
+        "Pitesti": randrange(-1, 2, 1),
+        "Ploiesti": randrange(-1, 2, 1),
+        "Orastie": -2,
+        "Dej": randrange(-1, 2, 1),
+        "Bistrita": randrange(-1, 2, 1),
+        "Sighisoara": randrange(-1, 2, 1)
     }
 
+    """Level 3"""
+    # Aici am pus un random de range -1 , 1 pentru un nivel mai dificil
     harta_est_romania = {
-        "Constanta": -1,
-        "Braila": -1,
-        "Galati": 0,
-        "Focsani": -1,
-        "Botosani": -1,
-        "Suceava": 0,
-        "Piatra Neamt": -1,
-        "Bacau": -1,
-        "Ramnicu Sarat": 0,
-        "Vaslui": 1,
-        "Tecuci": 0,  # New city with 0 damage
-        "Barlad": 0,  # New city with +1 HP
-        "Roman": 1  # New city with +1 HP
+        "Constanta": randrange(-1, 1, 1),
+        "Braila": randrange(-1, 1, 1),
+        "Galati": randrange(-1, 1, 1),
+        "Focsani": randrange(-1, 1, 1),
+        "Botosani": randrange(-1, 1, 1),
+        "Suceava": randrange(-1, 1, 1),
+        "Piatra Neamt": randrange(-1, 1, 1),
+        "Bacau": randrange(-1, 1, 1),
+        "Ramnicu Sarat": randrange(-1, 1, 1),
+        "Vaslui": randrange(-1, 1, 1),
+        "Tecuci": -3,
+        "Barlad": -5,
+        "Roman": randrange(-1, 1, 1),
+        "Husi": randrange(-1, 1, 1),
+        "Pascani": randrange(-1, 1, 1),
+        "Gura Humorului": randrange(-1, 1, 1)
     }
 
     return starting_point, ending_point, [harta_vest_romania, harta_centru_romania, harta_est_romania]
