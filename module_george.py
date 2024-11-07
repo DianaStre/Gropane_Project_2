@@ -1,4 +1,4 @@
-from random import random, randint
+from random import random, randint, randrange
 
 
 def generate_road():
