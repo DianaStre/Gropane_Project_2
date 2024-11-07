@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 from random import random, randint, randrange
-=======
-from random import randrange
->>>>>>> 969693b44a3f5d92bd85f0ea11f73fb61efddf3d
+
+
 
 
 def generate_road():
