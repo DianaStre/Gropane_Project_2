@@ -11,15 +11,11 @@ def generate_road():
     # inpartim tara in 3, vest/ centru/ est
     # plecam din vest, cand terminam vestul (cu viata), trecem la urmatorul nivel (centru), etc.
     # player must cross a total of 3 sections
-    # din cele 3 optiuni,
-    #       la nivelul 1: 1 neutra (0 damage), 1 buna (+1 damage), 1 rea (-1 damage)
-    #       la nivelul 2: 2 neutre (0 damage), 1 rea (-1 damage)
-    #       la nivelul 3: 2 rele (-1 damage), 1 neutra (0 damage)
-    # fiecare oras prin care am trecut, se suprima din lista dictionarului
-    # new line
     starting_point = "Timisoara"
     ending_point = "Iasi"
 
+    """Level 1"""
+    # Aici am pus un random de range -1 , 3 pentru mai multe sanse de castig
     harta_vest_romania = {
         "Arad": randrange(-1, 3, 1),
         "Oradea": randrange(-1, 3, 1),
@@ -35,6 +31,8 @@ def generate_road():
         "Resita": randrange(-1, 3, 1)
     }
 
+    """Level 2"""
+    # Aici am pus un random de range -1 , 2 pentru sanse moderate
     harta_centru_romania = {
         "Cluj-Napoca": randrange(-1, 2, 1),
         "Targu Mures": randrange(-1, 2, 1),
@@ -52,6 +50,8 @@ def generate_road():
         "Sighisoara": randrange(-1, 2, 1)
     }
 
+    """Level 3"""
+    # Aici am pus un random de range -1 , 1 pentru un nivel mai dificil
     harta_est_romania = {
         "Constanta": randrange(-1, 1, 1),
         "Braila": randrange(-1, 1, 1),
