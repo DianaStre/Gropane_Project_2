@@ -46,7 +46,7 @@ def generate_road():
         "Turda": randrange(-1, 2, 1),
         "Pitesti": randrange(-1, 2, 1),
         "Ploiesti": randrange(-1, 2, 1),
-        "Orastie": -4,
+        "Orastie": -2,
         "Dej": randrange(-1, 2, 1),
         "Bistrita": randrange(-1, 2, 1),
         "Sighisoara": randrange(-1, 2, 1)
@@ -63,7 +63,7 @@ def generate_road():
         "Bacau": randrange(-1, 1, 1),
         "Ramnicu Sarat": randrange(-1, 1, 1),
         "Vaslui": randrange(-1, 1, 1),
-        "Tecuci": -5,
+        "Tecuci": -3,
         "Barlad": -5,
         "Roman": randrange(-1, 1, 1),
         "Husi": randrange(-1, 1, 1),
